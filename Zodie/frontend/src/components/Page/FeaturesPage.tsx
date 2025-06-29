@@ -49,13 +49,13 @@ export function FeaturesPage() {
                         ],
                       }}></HeroAgent>
 
-      {/* Hover Effects Section - Prime-specific features */}
-      <FeaturesSectionWithHoverEffects />
       
       {/* Prime Agent Section - Moved to top as the main feature */}
       <AgentShowcase />
 
-      <IntegrationsNetwork></IntegrationsNetwork>
+      {/* Hover Effects Section - Prime-specific features */}
+      <FeaturesSectionWithHoverEffects />
+
       
       
       {/* Recruitment Workflow Section */}

@@ -61,7 +61,7 @@ const marqueeDuration = 22; // seconds
 
 export function RbacFeaturesPage() {
   return (
-    <div className="min-h-4xl bg-black flex flex-col items-center py-16 px-2 mb-32">
+    <div className="min-h-4xl bg-black flex flex-col items-center py-16 px-2">
       {/* Marquee Pills Row 1 (left to right) */}
       <div className="relative w-full overflow-x-hidden mb-16 mt-16" style={{ height: 60 }}>
         {/* Gradient fade left/right */}

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import {IntegrationsNetwork} from "@/components/blocks/IntegrationsNetwork";
 
 const features = [
   {
@@ -143,6 +144,7 @@ export function FeaturesSectionWithHoverEffects() {
           <FeatureCard>{features[3].text}</FeatureCard>
         </motion.div>
       </div>
+      <IntegrationsNetwork />
     </div>
   );
 }

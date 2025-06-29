@@ -200,7 +200,7 @@ function AnimatedTextCarousel({ messages }: { messages: string[] }) {
 }
 
   return (
-      <div className="min-h-screen bg-[#fce9db] py-16 px-4">
+      <div className="min-h-screen bg-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">

@@ -15,55 +15,79 @@ export default function NewLogin() {
     <>
       <Navbar />
       <div className="min-h-screen flex flex-col md:flex-row overflow-hidden pt-20">
-      {/* Left side - Login form */}
-      <div className="w-full md:w-1/2 flex items-center justify-center p-8 bg-white">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="w-full max-w-md shadow-lg rounded-xl p-8 bg-white"
-        >
-          <div className="mb-8 flex items-center justify-center">
-            <img src={logo} alt="Zordie Logo" className="h-12 w-auto mr-3" />
-            <h1 className="text-2xl font-bold text-gray-900">Zordie</h1>
+        {/* Left side - Login form */}
+        <div className="w-full md:w-1/2 flex items-center justify-center p-8 bg-white">
+          <div className="w-full max-w-md mx-auto">
+            <h1 className="text-4xl font-bold text-center mb-4">Login</h1>
+            <p className="text-gray-500 text-center mb-8 text-lg">
+              Enter your email below to login to your account
+            </p>
+            <form className="space-y-6">
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                  Email
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  required
+                  className="w-full rounded-md border border-gray-300 px-4 py-3 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all"
+                  placeholder="name@example.com"
+                />
+              </div>
+              <div>
+                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
+                  Password
+                </label>
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  autoComplete="current-password"
+                  required
+                  className="w-full rounded-md border border-gray-300 px-4 py-3 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all"
+                  placeholder="••••••••"
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full rounded-md bg-blue-600 hover:bg-blue-700 text-white py-3 font-semibold transition-all"
+              >
+                Login
+              </button>
+            </form>
+            <div className="flex justify-center mt-4">
+              <Link to="/forgot-password" className="text-blue-600 hover:underline text-sm">
+                Forgot your password?
+              </Link>
+            </div>
+            <div className="flex items-center my-6">
+              <div className="flex-grow border-t border-gray-200" />
+              <span className="mx-4 text-gray-400">Or</span>
+              <div className="flex-grow border-t border-gray-200" />
+            </div>
+            <button
+              type="button"
+              className="w-full flex items-center justify-center gap-2 rounded-md border border-gray-300 bg-white py-3 font-semibold text-gray-900 shadow-sm hover:bg-gray-50 transition-all"
+            >
+              <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" className="w-5 h-5" />
+              Login with Google
+            </button>
+            <p className="text-xs text-gray-500 text-center mt-6">
+              By signing in with Google, you agree to Zordie's{' '}
+              <a href="#" className="underline">Terms of Service</a> and{' '}
+              <a href="#" className="underline">Privacy Policy</a>
+            </p>
+            <p className="mt-8 text-center text-gray-500 text-sm">
+              Don't have an account?{' '}
+              <Link to="/signup" className="text-blue-600 hover:text-blue-700 font-medium">
+                Sign up
+              </Link>
+            </p>
           </div>
-          
-          <h2 className="text-3xl font-bold mb-2 text-gray-900">Welcome back</h2>
-          <p className="text-gray-500 mb-8">Sign in to your account to continue</p>
-          
-          <SignIn
-            appearance={{
-              elements: {
-                card: 'bg-transparent border-none shadow-none p-0',
-                headerTitle: 'hidden',
-                headerSubtitle: 'hidden',
-                socialButtonsBlockButton: 'rounded-lg border border-gray-200 bg-white hover:bg-gray-50 text-gray-700 shadow-sm transition-all flex items-center justify-center',
-                socialButtonsBlockButtonArrow: 'hidden',
-                alternativeMethodsBlockButton: 'w-full rounded-lg bg-white border border-gray-200 text-gray-700 font-medium py-3 my-2 hover:bg-gray-50 transition-all',
-                dividerRow: 'my-6 flex items-center',
-                dividerText: 'text-gray-400 text-xs px-2',
-                formFieldInput: 'w-full rounded-lg border border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 px-4 py-3 mb-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all',
-                formButtonPrimary: 'w-full bg-blue-600 hover:bg-blue-700 text-white rounded-lg py-3 font-medium transition-all',
-                footerActionLink: 'text-blue-600 hover:text-blue-700 font-medium',
-                formFieldLabel: 'text-gray-700 font-medium mb-1 block',
-                formFieldLabelRow: 'mb-1',
-                formFieldRow: 'mb-4',
-                footer: 'mt-6',
-                rootBox: 'w-full'
-              },
-            }}
-            redirectUrl="/"
-            signUpUrl="/signup"
-          />
-          
-          <p className="mt-8 text-center text-gray-500 text-sm">
-            Don't have an account?{' '}
-            <Link to="/signup" className="text-blue-600 hover:text-blue-700 font-medium">
-              Sign up
-            </Link>
-          </p>
-        </motion.div>
-      </div>
+        </div>
       
       {/* Right side - Decorative */}
       <div className="hidden md:flex md:w-1/2 bg-gradient-to-br from-blue-500 to-indigo-600 relative overflow-hidden">

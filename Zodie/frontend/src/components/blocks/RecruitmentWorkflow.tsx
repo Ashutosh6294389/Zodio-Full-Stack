@@ -5,6 +5,13 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { UserPlus, Building2, Users, LineChart } from 'lucide-react';
+import img1 from "@/images/Workflow1.png";
+import img2 from "@/images/Workflow2.png";
+import img3 from "@/images/Workflow3.png";
+import img4 from "@/images/Workflow4.png";
+import img5 from "@/images/agent5.png";
+import img6 from "@/images/agent6.png";
+import imgCenter from "@/images/agent-center.png";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -17,34 +24,34 @@ const cardVariants = {
 
 const recruitmentCards = [
   {
-    title: "Mastering the Art of Irresistible Job Listings",
-    description: "Create, Post, Attract & Persuade Job Seekers",
+    title: "Specify Requirements",
+    description: "Auto-generates role-specific job descriptions and instantly posts them across platforms—saving hours of manual work and attracting the right talent fast.",
     icon: UserPlus,
-    image: "https://framerusercontent.com/images/qrPzrzKgD7wd3ty7GpeQ8i313s.png",
+    image: img1,
     buttonText: "Job Postings",
     color: "bg-blue-50 border-blue-200"
   },
   {
-    title: "Distinguish Your Employer Brand",
-    description: "Creating a Compelling Employer Brand for Recruitment",
+    title: "Automate Sourcing & Screening",
+    description: "AI auto-sources, screens, and shortlists top candidates with real-time fraud detection and predictive matching ensuring data-backed, drop-proof hiring on autopilot.",
     icon: Building2,
-    image: "https://framerusercontent.com/images/qrPzrzKgD7wd3ty7GpeQ8i313s.png",
+    image: img2,
     buttonText: "Brand Essence",
     color: "bg-purple-50 border-purple-200"
   },
   {
-    title: "Streamline Your Recruiting Workflow",
-    description: "Optimizing Your Recruiting Workflow",
+    title: "Automate Onboarding",
+    description: "From scheduling interviews to sending offer letters and collecting documents, our AI automates every step. Candidates are onboarded with zero human delay, ensuring faster joining and better experience.",
     icon: Users,
-    image: "https://framerusercontent.com/images/qrPzrzKgD7wd3ty7GpeQ8i313s.png",
+    image: img3,
     buttonText: "Workflow",
     color: "bg-green-50 border-green-200"
   },
   {
-    title: "Elevate Candidate Engagement",
-    description: "Enhancing Candidate Engagement from Resume to Hired Candidates",
+    title: "Manage & Track Performance",
+    description: "Zordie AI intelligently manages your team post-onboarding—auto-tracking performance, task progress, engagement, and growth. It aligns goals, delivers continuous feedback, and offers real-time insights to boost productivity and retention effortlessly.",
     icon: LineChart,
-    image: "https://framerusercontent.com/images/qrPzrzKgD7wd3ty7GpeQ8i313s.png",
+    image: img4,
     buttonText: "Engagement",
     color: "bg-orange-50 border-orange-200"
   }
@@ -94,7 +101,7 @@ export function RecruitmentWorkflow() {
                     <img 
                       src={card.image} 
                       alt={card.title} 
-                      className="w-full h-auto object-contain rounded-md"
+                      className="w-full h-full object-contain rounded-md"
                     />
                   </div>
                 </div>
@@ -102,8 +109,6 @@ export function RecruitmentWorkflow() {
             </motion.div>
           ))}
         </div>
-
-        
       </div>
     </section>
   );

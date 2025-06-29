@@ -28,7 +28,7 @@ export function IntegrationsNetwork() {
   const center = { left: 700, top: 350 };
 
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center justify-start py-8 w-full">
+    <div className="min-h-screen flex flex-col items-center justify-start py-8 w-full">
       {/* Badge */}
       <div className="mb-4 mt-16">
         <span className="px-6 py-2 rounded-full bg-blue-50 text-blue-900 font-bold text-lg shadow flex items-center gap-3">
@@ -39,8 +39,8 @@ export function IntegrationsNetwork() {
         </span>
       </div>
       {/* Heading */}
-      <h1 className="text-6xl font-extrabold text-gray-900 mb-4 text-center w-full">Integrates with</h1>
-      <p className="text-gray-600 text-2xl mb-14 text-center w-full">Seamlessly integrate with all of your favorite agents</p>
+      <h1 className="text-6xl font-extrabold text-white mb-4 text-center w-full">Integrates with</h1>
+      <p className="text-white text-2xl mb-14 text-center w-full">Seamlessly integrate with all of your favorite agents</p>
       {/* Network */}
       <div className="relative w-[1400px] h-[800px] mx-auto">
         {/* SVG dashed elbow lines */}
@@ -147,7 +147,7 @@ export function IntegrationsNetwork() {
       {/* Features row */}
       <div className="flex flex-wrap items-center justify-center gap-20 mt-24 w-full">
         {ICONS.map(({ icon: Icon, label }, i) => (
-          <div key={i} className="flex items-center gap-4 text-gray-700 text-2xl font-semibold">
+          <div key={i} className="flex items-center gap-4 text-white text-2xl font-semibold">
             <Icon className="w-12 h-12 mr-2 text-gray-900" />
             <span>{label}</span>
             {i < ICONS.length - 1 && (

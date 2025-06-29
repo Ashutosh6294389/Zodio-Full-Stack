@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Brain, Target, MessageCircle, FileText, DollarSign, BarChart3, ArrowRight, Users, Zap, Workflow, Shield, Clock, MessageSquare, Award, Briefcase, Headphones, Search } from 'lucide-react';
+import img1 from "@/images/Prime_agent.png";
+import img2 from "@/images/Prime2.png"
 
 type CollaborationStep = {
   id: string;
@@ -154,7 +156,7 @@ export function TeamCollaboration() {
                 </div>
                 <div className="bg-white rounded-xl p-4 flex items-center justify-center">
                   <img 
-                    src="/images/agent-center.png" 
+                    src={img2}
                     alt="Prime Agent Dashboard" 
                     className="w-full h-auto object-contain rounded-md shadow-lg"
                   />
@@ -245,7 +247,7 @@ export function TeamCollaboration() {
               
               <div className="bg-gray-50 rounded-xl p-8">
                 <img 
-                  src="/images/Agents.png" 
+                  src={img1} 
                   alt="Agent Collaboration Network" 
                   className="w-full h-auto object-contain rounded-md shadow-lg"
                 />

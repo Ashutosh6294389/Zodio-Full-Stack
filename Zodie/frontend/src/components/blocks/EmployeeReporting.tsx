@@ -5,6 +5,9 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Bell,  AlertTriangle, AlertCircle, BarChart, Clock, PieChart, Calendar, FileText, Users } from 'lucide-react';
+import img1 from "@/images/Performance.png";
+import img2 from "@/images/Performance2.png"
+import img3 from "@/images/Performance3.png"
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -75,7 +78,7 @@ export function EmployeeReporting() {
               </div>
               <div className="bg-indigo-50 rounded-2xl p-8 flex items-center justify-center min-h-[320px]">
                 <img 
-                  src="https://framerusercontent.com/images/qrPzrzKgD7wd3ty7GpeQ8i313s.png" 
+                  src={img1}
                   alt="Daily Employee Report Dashboard" 
                   className="w-full h-auto object-contain rounded-xl shadow-lg"
                 />
@@ -96,7 +99,7 @@ export function EmployeeReporting() {
             <div className="grid md:grid-cols-2 gap-10 p-6">
               <div className="order-2 md:order-1 bg-blue-50 rounded-2xl p-8 flex items-center justify-center min-h-[320px]">
                 <img 
-                  src="https://framerusercontent.com/images/qrPzrzKgD7wd3ty7GpeQ8i313s.png" 
+                  src={img2} 
                   alt="Time Distribution Dashboard" 
                   className="w-full h-auto object-contain rounded-xl shadow-lg"
                 />
@@ -162,9 +165,9 @@ export function EmployeeReporting() {
               </div>
               <div className="bg-blue-50 rounded-2xl p-8 flex items-center justify-center order-1 md:order-2 mb-4 md:mb-0 min-h-[320px]">
                 <img 
-                  src="https://framerusercontent.com/images/qrPzrzKgD7wd3ty7GpeQ8i313s.png?mock=productivity-alerts" 
+                  src={img3} 
                   alt="Productivity Alerts Dashboard showing work hours and capacity alerts" 
-                  className="w-full h-auto object-contain rounded-xl shadow-lg"
+                  className="w-full h-full object-contain rounded-xl shadow-lg"
                 />
               </div>
             </div>
