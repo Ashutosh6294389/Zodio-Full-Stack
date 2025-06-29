@@ -187,39 +187,39 @@ export default function AIBenefitsLanding() {
         </div>
 
         {/* Integration, Work Hour Analysis, Generate Section */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Integration Card */}
-          <motion.div
-            className="bg-white rounded-3xl p-8 shadow border border-gray-100 flex flex-col items-start"
-            variants={cardVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            custom={0}
-          >
-            <div className="text-2xl font-semibold mb-6">Integration</div>
-            <div className="space-y-4 w-full">
-              {/* ...integration rows... */}
-              {/* (content unchanged) */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <img src="https://cdn.worldvectorlogo.com/logos/framer.svg" alt="Framer" className="w-7 h-7" />
-                  <span className="text-lg">Framer</span>
-                </div>
-                <span className="w-8 h-5 rounded-full bg-gray-200 flex items-center">
-                  <span className="w-4 h-4 bg-white rounded-full ml-1 border border-gray-300"></span>
+<div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+  {/* Integration Card */}
+  <motion.div
+    className="bg-white rounded-3xl p-8 shadow border border-gray-100 flex flex-col items-start"
+    variants={cardVariants}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.2 }}
+    custom={0}
+  >
+    <div className="text-2xl font-semibold mb-6">Integration</div>
+    <div className="space-y-4 w-full">
+      {/* ...integration rows... */}
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <img src="https://cdn.worldvectorlogo.com/logos/framer.svg" alt="Framer" className="w-7 h-7" />
+          <span className="text-lg">Framer</span>
+        </div>
+        <span className="w-8 h-5 rounded-full bg-gray-200 flex items-center">
+          <span className="w-4 h-4 bg-white rounded-full ml-1 border border-gray-300"></span>
+        </span>
+      </div>
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <img src="https://framerusercontent.com/images/GM11WdhRbS2DxfQ9EeblmqK5io.svg" alt="Blogger" className="w-7 h-7" />
+            <span className="text-lg">Blogger</span>
+        </div>
+            <span className="w-8 h-5 rounded-full bg-green-200 flex items-center justify-end">
+              <span className="w-4 h-4 bg-green-500 rounded-full mr-1"></span>
                 </span>
-              </div>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <img src="https://framerusercontent.com/images/GM11WdhRbS2DxfQ9EeblmqK5io.svg" alt="Blogger" className="w-7 h-7" />
-                  <span className="text-lg">Blogger</span>
-                </div>
-                <span className="w-8 h-5 rounded-full bg-green-200 flex items-center justify-end">
-                  <span className="w-4 h-4 bg-green-500 rounded-full mr-1"></span>
-                </span>
-              </div>
-              <div className="flex items-center justify-between">
+      </div>
+
+      <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <img src="https://framerusercontent.com/images/2FfwF2Bd1FAHaIV8DEj2kNqGMc.svg" alt="Mail Chimp" className="w-7 h-7" />
                   <span className="text-lg">Mail Chimp</span>
@@ -228,6 +228,7 @@ export default function AIBenefitsLanding() {
                   <span className="w-4 h-4 bg-green-500 rounded-full mr-1"></span>
                 </span>
               </div>
+
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <img src="https://framerusercontent.com/images/hU724pkSz3wZvsYbct1bkR6lBg.svg" alt="Trello" className="w-7 h-7" />
@@ -237,88 +238,80 @@ export default function AIBenefitsLanding() {
                   <span className="w-4 h-4 bg-white rounded-full ml-1 border border-gray-300"></span>
                 </span>
               </div>
-            </div>
-          </motion.div>
-          {/* Work Hour Analysis Card */}
-          <motion.div
-            className="bg-white rounded-3xl p-8 shadow border border-gray-100 flex flex-col items-start"
-            variants={cardVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            custom={1}
-          >
-            <div className="flex items-center justify-between w-full mb-4">
-              <div className="flex items-center gap-2">
-                <span className="inline-block bg-gray-100 rounded-lg p-1">
-                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3" stroke="#222" strokeWidth="1.5"/><path d="M3 9h18" stroke="#222" strokeWidth="1.5" strokeLinecap="round"/></svg>
-                </span>
-                <span className="text-lg font-semibold">Work Hour Analysis</span>
-              </div>
-              <button className="border border-gray-300 rounded-lg px-3 py-1 text-sm font-medium hover:bg-gray-50 transition">Details</button>
-            </div>
-            <div className="mt-8 mb-4 flex-shrink-0">
-              <img
-                src="https://framerusercontent.com/images/kVxLX8LDZCyyL5dwQWxKw9DFNY.svg"
-                alt="Automate Workflows"
-                className="w-[520px] h-auto rounded-2xl shadow-lg object-cover"
-                loading="lazy"
-              />
-            </div>
-          </motion.div>
-          {/* Generate Card */}
-          <motion.div
-            className="bg-white rounded-3xl p-8 shadow border border-gray-100 flex flex-col items-center justify-center min-h-[220px]"
-            variants={cardVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            custom={2}
-          >
-            <div className="w-full h-36 flex items-center justify-center relative">
-              <div className="absolute inset-0 grid grid-cols-6 grid-rows-4 gap-0 pointer-events-none">
-                {[...Array(6*4)].map((_, i) => (
-                  <div key={i} className="border border-gray-100" />
-                ))}
-              </div>
-              <button className="relative z-10 bg-white border border-gray-200 rounded-full px-8 py-3 text-lg font-semibold flex items-center gap-2 shadow hover:bg-gray-50 transition">
-                <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20" stroke="#4f8cff" strokeWidth="2" strokeLinecap="round"/><circle cx="12" cy="12" r="10" stroke="#4f8cff" strokeWidth="2"/></svg>
-                Generate
-              </button>
-            </div>
-          </motion.div>
-        </div>
 
-        {/* Below cards: descriptions */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              title: "Third-party integrations",
-              desc: "Connect with various apps to consolidate data and streamline workflows"
-            },
-            {
-              title: "Real-Time Data",
-              desc: "Access dynamic dashboards that show live data insights"
-            },
-            {
-              title: "Automated Reporting",
-              desc: "Generate reports automatically, saving time and ensuring consistent data"
-            }
-          ].map((item, i) => (
+      {/* ...other integration rows... */}
+              </div>
+              {/* Description below the card */}
+              <div className="mt-16">
+                <div className="text-3xl font-semibold mb-2">Third-party integrations</div>
+                <div className="text-gray-500 text-base mb-2 mt-4 text-xl">
+                  Connect with various apps to consolidate data and streamline workflows
+                </div>
+              </div>
+            </motion.div>
+            {/* Work Hour Analysis Card */}
             <motion.div
-              key={item.title}
+              className="bg-white rounded-3xl p-8 shadow border border-gray-100 flex flex-col items-start"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              custom={i}
-              className="bg-white rounded-3xl p-8 shadow border border-gray-100 flex flex-col items-start"
+              custom={1}
             >
-              <div className="text-3xl font-semibold mb-2">{item.title}</div>
-              <div className="text-gray-500 text-base mb-2 mt-4 text-xl">{item.desc}</div>
+              <div className="flex items-center justify-between w-full mb-4">
+                <div className="flex items-center gap-2">
+                  <span className="inline-block bg-gray-100 rounded-lg p-1">
+                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3" stroke="#222" strokeWidth="1.5"/><path d="M3 9h18" stroke="#222" strokeWidth="1.5" strokeLinecap="round"/></svg>
+                  </span>
+                  <span className="text-lg font-semibold">Work Hour Analysis</span>
+                </div>
+                <button className="border border-gray-300 rounded-lg px-3 py-1 text-sm font-medium hover:bg-gray-50 transition">Details</button>
+              </div>
+              <div className="mt-8 mb-4 flex-shrink-0">
+                <img
+                  src="https://framerusercontent.com/images/kVxLX8LDZCyyL5dwQWxKw9DFNY.svg"
+                  alt="Automate Workflows"
+                  className="w-[520px] h-auto rounded-2xl shadow-lg object-cover"
+                  loading="lazy"
+                />
+              </div>
+              {/* Description below the card */}
+              <div className="mt-8">
+                <div className="text-3xl font-semibold mb-2">Real-Time Data</div>
+                <div className="text-gray-500 text-base mb-2 mt-4 text-xl">
+                  Access dynamic dashboards that show live data insights
+                </div>
+              </div>
             </motion.div>
-          ))}
-        </div>
+            {/* Generate Card */}
+            <motion.div
+              className="bg-white rounded-3xl p-8 shadow border border-gray-100 flex flex-col items-center justify-center min-h-[220px]"
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              custom={2}
+            >
+              <div className="w-full h-36 flex items-center justify-center relative">
+                <div className="absolute inset-0 grid grid-cols-6 grid-rows-4 gap-0 pointer-events-none">
+                  {[...Array(6*4)].map((_, i) => (
+                    <div key={i} className="border border-gray-100" />
+                  ))}
+                </div>
+                <button className="relative z-10 bg-white border border-gray-200 rounded-full px-8 py-3 text-lg font-semibold flex items-center gap-2 shadow hover:bg-gray-50 transition">
+                  <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20" stroke="#4f8cff" strokeWidth="2" strokeLinecap="round"/><circle cx="12" cy="12" r="10" stroke="#4f8cff" strokeWidth="2"/></svg>
+                  Generate
+                </button>
+              </div>
+              {/* Description below the card */}
+              <div className="mt-28 text-center">
+                <div className="text-3xl font-semibold mb-2">Automated Reporting</div>
+                <div className="text-gray-500 text-base mb-2 mt-4 text-xl">
+                  Generate reports automatically, saving time and ensuring consistent data
+                </div>
+              </div>
+            </motion.div>
+          </div>
 
         {/* Performance Analysis system section */}
         <div className="mt-8 w-full rounded-2xl p-8 flex flex-col md:flex-row items-center md:items-stretch gap-8 bg-gradient-to-r from-teal-200 via-blue-200 to-blue-300">
