@@ -413,124 +413,133 @@ const PreAccessLanding = () => {
                 </div>
               )}
 
-              {activeTab === 'analytics' && (
-                <div
-                  key="analytics"
-                  className="rounded-[20px] border border-blue-100/30 bg-transparent p-6 backdrop-blur-sm shadow-lg"
-                >
-                  <h3 className="mb-4 text-xl font-medium text-blue-600">Advanced Analytics Dashboard</h3>
-                  <p className="mb-4 text-gray-700 backdrop-blur-sm bg-transparent p-3 rounded-[20px] border border-blue-100/30">
-                    Gain deep insights into your workforce with our comprehensive analytics platform.
-                  </p>
-                  <ul className="space-y-2">
-                    {[
-                      'Real-time performance metrics',
-                      'Predictive retention analysis',
-                      'Talent gap identification',
-                      'Customizable reporting tools'
-                    ].map((feature, i) => (
-                      <motion.li
-                        key={i}
-                        initial={{ opacity: 0, x: -10 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: i * 0.1 }}
-                        className="flex items-center text-gray-700 p-2 rounded-md bg-transparent"
-                      >
-                        <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-gradient-to-br from-green-400/20 to-green-600/20 mr-3 border border-green-500/30">
-                          <Check className="h-3 w-3 text-green-500" />
-                        </div>
-                        {feature}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+            {activeTab === 'analytics' && (
+              <div
+                key="analytics"
+                className="rounded-[20px] border border-blue-100/30 bg-transparent p-6 backdrop-blur-sm relative overflow-hidden group shadow-lg"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-blue-800/5"></div>
+                <div className="absolute -inset-1/2 top-0 bg-gradient-to-b from-blue-500/20 to-transparent opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
+                <h3 className="mb-4 text-xl font-medium text-blue-600 flex items-center">
+                  <Zap className="h-5 w-5 mr-2 text-blue-600" />
+                  <span>Advanced Analytics Dashboard</span>
+                </h3>
+                <p className="mb-4 text-gray-700 backdrop-blur-sm bg-transparent p-3 rounded-[20px] border border-blue-100/30">
+                  Gain deep insights into your workforce with our comprehensive analytics platform.
+                </p>
+                <ul className="space-y-2">
+                  {[
+                    'Real-time performance metrics',
+                    'Predictive retention analysis',
+                    'Talent gap identification',
+                    'Customizable reporting tools'
+                  ].map((feature, i) => (
+                    <motion.li
+                      key={i}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.1 }}
+                      className="flex items-center text-gray-700 p-2 rounded-md bg-transparent"
+                    >
+                      <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-gradient-to-br from-green-400/20 to-green-600/20 mr-3 border border-green-500/30">
+                        <Check className="h-3 w-3 text-green-500" />
+                      </div>
+                      {feature}
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
-              {activeTab === 'automation' && (
-                <div
-                  key="automation"
-                  className="rounded-[20px] border border-blue-100/30 bg-transparent p-6 backdrop-blur-sm shadow-lg"
-                >
-                  <h3 className="mb-4 text-xl font-medium text-blue-600">Workflow Automation</h3>
-                  <p className="mb-4 text-gray-700 backdrop-blur-sm bg-transparent p-3 rounded-[20px] border border-blue-100/30">
-                    Streamline your HR processes with intelligent automation that saves time and reduces errors.
-                  </p>
-                  <ul className="space-y-2">
-                    {[
-                      'Document processing and approval',
-                      'Employee lifecycle management',
-                      'Time-off request handling',
-                      'Compliance monitoring'
-                    ].map((feature, i) => (
-                      <motion.li
-                        key={i}
-                        initial={{ opacity: 0, x: -10 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: i * 0.1 }}
-                        className="flex items-center text-gray-700 p-2 rounded-md bg-transparent"
-                      >
-                        <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-gradient-to-br from-green-400/20 to-green-600/20 mr-3 border border-green-500/30">
-                          <Check className="h-3 w-3 text-green-500" />
-                        </div>
-                        {feature}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+            {activeTab === 'automation' && (
+              <div
+                key="automation"
+                className="rounded-[20px] border border-blue-100/30 bg-transparent p-6 backdrop-blur-sm relative overflow-hidden group shadow-lg"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-blue-800/5"></div>
+                <div className="absolute -inset-1/2 top-0 bg-gradient-to-b from-blue-500/20 to-transparent opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
+                <h3 className="mb-4 text-xl font-medium text-blue-600 flex items-center">
+                  <Star className="h-5 w-5 mr-2 text-blue-600" />
+                  <span>Workflow Automation</span>
+                </h3>
+                <p className="mb-4 text-gray-700 backdrop-blur-sm bg-transparent p-3 rounded-[20px] border border-blue-100/30">
+                  Streamline your HR processes with intelligent automation that saves time and reduces errors.
+                </p>
+                <ul className="space-y-2">
+                  {[
+                    'Document processing and approval',
+                    'Employee lifecycle management',
+                    'Time-off request handling',
+                    'Compliance monitoring'
+                  ].map((feature, i) => (
+                    <motion.li
+                      key={i}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.1 }}
+                      className="flex items-center text-gray-700 p-2 rounded-md bg-transparent"
+                    >
+                      <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-gradient-to-br from-green-400/20 to-green-600/20 mr-3 border border-green-500/30">
+                        <Check className="h-3 w-3 text-green-500" />
+                      </div>
+                      {feature}
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
               <div
-                className="relative flex items-center justify-center overflow-hidden rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-900/30 to-blue-700/50 p-6 backdrop-blur-sm shadow-lg"
-              >
-                {/* Decorative elements */}
-                <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-blue-500/20 blur-3xl animate-pulse"></div>
-                <div className="absolute -bottom-20 -left-20 h-40 w-40 rounded-full bg-blue-600/20 blur-3xl animate-pulse"></div>
-                <motion.div 
-                  className="absolute inset-0 bg-gradient-to-r from-blue-600/0 via-blue-500/5 to-blue-600/0"
-                  animate={{ x: ['-100%', '100%'] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
-                />
-                
-                <div className="relative z-10 text-center">
-                  <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-blue-500/20 to-blue-700/20 border border-blue-500/30 relative group">
-                    <motion.div
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                      className="absolute inset-0 rounded-full border border-blue-400/30 blur-sm"
-                    />
-                    {activeTab === 'ai' && <Sparkles className="h-8 w-8 text-blue-400" />}
-                    {activeTab === 'analytics' && <Users className="h-8 w-8 text-blue-400" />}
-                    {activeTab === 'automation' && <Shield className="h-8 w-8 text-blue-400" />}
-                  </div>
-                  
-                  <h3 className="mb-4 text-2xl font-bold text-blue-600 relative">
-                    <span className="relative z-10">
-                      {activeTab === 'ai' && 'Exclusive Beta Features'}
-                      {activeTab === 'analytics' && 'Premium Insights'}
-                      {activeTab === 'automation' && 'Priority Support'}
-                    </span>
-                  </h3>
-                  
-                  <p className="mb-6 text-gray-700 backdrop-blur-sm bg-transparent p-3 rounded-[20px] border border-blue-100/30">
-                    {activeTab === 'ai' && 'Early access members will be the first to try our newest AI capabilities before they\'re available to the public.'}
-                    {activeTab === 'analytics' && 'Get access to our advanced analytics suite with personalized insights tailored to your organization.'}
-                    {activeTab === 'automation' && 'Receive dedicated support and implementation assistance from our expert team.'}
-                  </p>
-                  
-                  <div>
-                    <Button asChild className="bg-gradient-to-r from-blue-500 to-blue-600 text-white relative overflow-hidden group">
-                      <a href="/features" className="relative z-10">
-                        <motion.div 
-                          className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-white/20 to-blue-400/0"
-                          animate={{ x: ['-100%', '100%'] }}
-                          transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
-                        />
-                        <span className="relative z-10">Learn more</span>
-                      </a>
-                    </Button>
-                  </div>
+              className="relative flex items-center justify-center overflow-hidden rounded-[20px] border border-blue-100/30 bg-white/10 backdrop-blur-md shadow-lg group"
+            >
+              {/* Glassmorphism & gradient overlays */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-blue-800/5 z-0" />
+              <div className="absolute -inset-1/2 top-0 bg-gradient-to-b from-blue-500/20 to-transparent opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 z-0" />
+              {/* Decorative elements */}
+              <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-blue-500/20 blur-3xl animate-pulse z-0"></div>
+              <div className="absolute -bottom-20 -left-20 h-40 w-40 rounded-full bg-blue-600/20 blur-3xl animate-pulse z-0"></div>
+              <motion.div 
+                className="absolute inset-0 bg-gradient-to-r from-blue-600/0 via-blue-500/5 to-blue-600/0 z-0"
+                animate={{ x: ['-100%', '100%'] }}
+                transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
+              />
+              <div className="relative z-10 text-center">
+                <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-blue-500/20 to-blue-700/20 border border-blue-500/30 relative group">
+                  <motion.div
+                    animate={{ scale: [1, 1.2, 1] }}
+                    transition={{ duration: 3, repeat: Infinity }}
+                    className="absolute inset-0 rounded-full border border-400/30 blur-sm"
+                  />
+                  {activeTab === 'ai' && <Sparkles className="h-8 w-8 text-blue-400" />}
+                  {activeTab === 'analytics' && <Users className="h-8 w-8 text-blue-400" />}
+                  {activeTab === 'automation' && <Shield className="h-8 w-8 text-blue-400" />}
+                </div>
+                <h3 className="mb-4 text-2xl font-bold text-blue-600 relative">
+                  <span className="relative z-10">
+                    {activeTab === 'ai' && 'Exclusive Beta Features'}
+                    {activeTab === 'analytics' && 'Premium Insights'}
+                    {activeTab === 'automation' && 'Priority Support'}
+                  </span>
+                </h3>
+                <p className="mb-6 text-gray-700 backdrop-blur-sm bg-transparent p-3 rounded-[20px] border border-blue-100/30">
+                  {activeTab === 'ai' && 'Early access members will be the first to try our newest AI capabilities before they\'re available to the public.'}
+                  {activeTab === 'analytics' && 'Get access to our advanced analytics suite with personalized insights tailored to your organization.'}
+                  {activeTab === 'automation' && 'Receive dedicated support and implementation assistance from our expert team.'}
+                </p>
+                <div>
+                  <Button asChild className="bg-gradient-to-r from-blue-500 to-blue-600 text-white relative overflow-hidden group">
+                    <a href="/features" className="relative z-10">
+                      <motion.div 
+                        className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-white/20 to-blue-400/0"
+                        animate={{ x: ['-100%', '100%'] }}
+                        transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
+                      />
+                      <span className="relative z-10">Learn more</span>
+                    </a>
+                  </Button>
                 </div>
               </div>
+            </div>
             </AnimatePresence>
           </div>
         </div>
