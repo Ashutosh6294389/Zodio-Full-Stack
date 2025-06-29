@@ -18,6 +18,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import {CallToAction} from "@/components/blocks/CallToAction"
 
 
 // Ocean Wave Component (Static version)
@@ -49,6 +50,7 @@ const About = () => {
       <OurValues />
       <OurTeam />
       <JoinUs />
+      <CallToAction />
       <Footerdemo />
     </div>
   );

@@ -1,19 +1,34 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export function CallToAction () {
   return (
-    <div className="max-w-7xl p-6 lg:px-8">
-      <div className="relative isolate overflow-hidden bg-gray-900 px-6 py-24 shadow-2xl rounded-2xl sm:rounded-3xl sm:px-24 xl:py-32">
-        <h2 className="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight text-white sm:text-4xl">
+    <div className="min-h-screen w-full flex items-center justify-center bg-gray-900 relative overflow-hidden">
+      <div className="relative isolate overflow-hidden w-full h-full flex flex-col items-center justify-center px-6 py-24 sm:px-24 xl:py-32">
+        <motion.h2
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="mx-auto max-w-2xl text-center text-4xl md:text-6xl font-bold tracking-tight text-white mb-8"
+        >
           Keep Updated
-        </h2>
+        </motion.h2>
 
-        <p className="mx-auto mt-2 max-w-xl text-center text-lg leading-8 text-gray-300">
-          Keep pace with SecureCloud advancements! Join our mailing list for
-          selective, noteworthy updates.
-        </p>
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="mx-auto mt-2 max-w-xl text-center text-2xl leading-9 text-gray-300 mb-12"
+        >
+          Keep pace with SecureCloud advancements! Join our mailing list for selective, noteworthy updates.
+        </motion.p>
 
-        <form className="mx-auto mt-10 flex max-w-md gap-x-4">
+        <motion.form
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+          className="mx-auto mt-4 flex max-w-xl w-full gap-x-4"
+        >
           <label htmlFor="email-address" className="sr-only">
             Email address
           </label>
@@ -23,22 +38,22 @@ export function CallToAction () {
             type="email"
             autoComplete="email"
             required
-            className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+            className="min-w-0 flex-auto rounded-md border-0 bg-white/10 px-6 py-4 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white text-lg"
             placeholder="Enter your email"
           />
 
           <button
             type="submit"
-            className="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            className="flex-none rounded-md bg-white px-8 py-4 text-lg font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
             Notify me
           </button>
-        </form>
+        </motion.form>
 
-        {/* If the SVG is decorative, ensure it's accessible. */}
+        {/* Decorative SVG background */}
         <svg
           viewBox="0 0 1024 1024"
-          className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2"
+          className="absolute left-1/2 top-1/2 -z-10 h-[120vh] w-[120vw] -translate-x-1/2 -translate-y-1/2"
           aria-hidden="true"
         >
           <circle

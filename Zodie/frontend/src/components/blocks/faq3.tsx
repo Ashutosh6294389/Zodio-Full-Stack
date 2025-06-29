@@ -99,12 +99,8 @@ export default function FAQ({ data }: FAQProps) {
       
 
       {/* Big Horizontal Card with Two Highlighted Cards Inside */}
-    <div className="max-w-7xl mx-auto mt-16">
       {/* Call To Action Section */}
-      <div className=" max-w-9xl mt-24 justify-item-center ">
         <CallToAction />
-      </div>
-    </div>
     </div>
       </div>
       )

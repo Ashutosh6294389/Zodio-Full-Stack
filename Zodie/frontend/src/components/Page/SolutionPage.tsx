@@ -11,6 +11,7 @@ import {SolutionCardsSection} from "../blocks/SolutionCardsSection"
 import {ResultsSection} from "../blocks/ResultsSection"
 import {SolutionsImpactSection} from "../blocks/SolutionsImpactSection"
 import {ImpactSection} from "../blocks/ImpactSection-2"
+import {CallToAction} from "@/components/blocks/CallToAction"
 
 export function SolutionPage () {
   return (
@@ -21,6 +22,7 @@ export function SolutionPage () {
       <ResultsSection />
       <SolutionsImpactSection />
       <ImpactSection />
+      <CallToAction />
       <Footerdemo />
     </div>
   )
