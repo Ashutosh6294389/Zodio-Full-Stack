@@ -275,7 +275,7 @@ function AnimatedTextCarousel({ messages }: { messages: string[] }) {
       </div>
       </div>
       
-      <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4 mx-32">
+      <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-8 mx-40">
       {/* Superior Performance Card */}
       <div className="md:col-span-2 max-w-4xl mx-auto rounded-[48px] bg-gradient-to-br from-teal-400 to-blue-800 p-12 flex flex-col justify-between min-h-[520px] shadow-xl relative overflow-hidden">
         <div>
@@ -315,7 +315,7 @@ function AnimatedTextCarousel({ messages }: { messages: string[] }) {
         </div>
       </div>
       {/* Lightning Fast Card */}
-      <div className="rounded-[48px]  max-w-2xl mx-auto  bg-gradient-to-br from-teal-400 to-blue-900 p-10 flex flex-col justify-between min-h-[420px] shadow-xl relative overflow-hidden">
+      <div className="rounded-[48px]  max-w-lg mx-auto  bg-gradient-to-br from-teal-400 to-blue-900 p-10 flex flex-col justify-between min-h-[420px] shadow-xl relative overflow-hidden">
         <div>
           <div className="text-5xl md:text-4xl font-bold text-white mb-4">Lightning Fast</div>
           <div className="text-xl text-white/90 mb-12 max-w-xl">
