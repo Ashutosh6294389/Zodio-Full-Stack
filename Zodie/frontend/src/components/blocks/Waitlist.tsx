@@ -45,12 +45,6 @@ const PreAccess = () => {
     <div className="relative bg-[radial-gradient(120%_120%_at_50%_100%,rgba(253,186,116,0.8)_0%,white_85%)]">
       <Navbar />
       <PreAccessLanding />
-      <div className="max-w-7xl mx-auto mt-16">
-      {/* Call To Action Section */}
-      <div className=" max-w-9xl mt-24 justify-item-center ">
-        <CallToAction />
-      </div>
-    </div>
       <Footerdemo />
     </div>
   );

@@ -275,9 +275,9 @@ function AnimatedTextCarousel({ messages }: { messages: string[] }) {
       </div>
       </div>
       
-      <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-8 mx-40">
+      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-12 xl:px-40">
       {/* Superior Performance Card */}
-      <div className="md:col-span-2 max-w-4xl mx-auto rounded-[48px] bg-gradient-to-br from-teal-400 to-blue-800 p-12 flex flex-col justify-between min-h-[520px] shadow-xl relative overflow-hidden">
+      <div className="lg:col-span-2 rounded-[48px] bg-gradient-to-br from-teal-400 to-blue-800 p-12 flex flex-col justify-between min-h-[520px] shadow-xl relative overflow-hidden">
         <div>
           <div className="text-5xl md:text-4xl font-bold text-white mb-4">Superior Performance</div>
           <div className="text-xl text-white/90 mb-12 max-w-3xl">
@@ -315,7 +315,7 @@ function AnimatedTextCarousel({ messages }: { messages: string[] }) {
         </div>
       </div>
       {/* Lightning Fast Card */}
-      <div className="rounded-[48px]  max-w-lg mx-auto  bg-gradient-to-br from-teal-400 to-blue-900 p-10 flex flex-col justify-between min-h-[420px] shadow-xl relative overflow-hidden">
+      <div className="rounded-[48px] bg-gradient-to-br from-teal-400 to-blue-900 p-10 flex flex-col justify-between min-h-[420px] shadow-xl relative overflow-hidden">
         <div>
           <div className="text-5xl md:text-4xl font-bold text-white mb-4">Lightning Fast</div>
           <div className="text-xl text-white/90 mb-12 max-w-xl">
@@ -332,7 +332,6 @@ function AnimatedTextCarousel({ messages }: { messages: string[] }) {
         </div>
         </div>
       </div>
-    </div>
 
     <style jsx global>{`
     @keyframes pulse-slow {
@@ -352,9 +351,8 @@ function AnimatedTextCarousel({ messages }: { messages: string[] }) {
     .animate-pulse-slowest { animation: pulse-slowest 4.5s infinite; }
     `}</style>
 
-    <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-80 mx-40">
       {/* Seamless Integration */}
-      <div className="rounded-[48px]  max-w-lg mx-auto bg-gradient-to-br from-teal-400 to-blue-900 p-10 flex flex-col justify-between min-h-[420px] shadow-xl relative overflow-hidden">
+      <div className="rounded-[48px] bg-gradient-to-br from-teal-400 to-blue-900 p-10 flex flex-col justify-between min-h-[420px] shadow-xl relative overflow-hidden">
         <div>
           <div className="text-5xl md:text-5xl font-bold text-white mb-4">Seamless Integration</div>
         <div className="text-xl text-white/90 mb-12 max-w-xl">
@@ -367,7 +365,7 @@ function AnimatedTextCarousel({ messages }: { messages: string[] }) {
         <div className="overflow-hidden w-full">
           <div className="flex gap-8 items-center w-max animate-marquee-ltr">
             {[...appsRow1, ...appsRow1].map((icon, i) => (
-              <div key={i} className="bg-white/20 rounded-2xl p-3 flex items-center justify-center min-w-[64px]">
+              <div key={i} className="bg-white/20 rounded-2xl p-3 flex items-center justify-center w-full">
                 {icon}
               </div>
             ))}
@@ -377,7 +375,7 @@ function AnimatedTextCarousel({ messages }: { messages: string[] }) {
         <div className="overflow-hidden w-full">
           <div className="flex gap-8 items-center w-max animate-marquee-rtl">
             {[...appsRow2, ...appsRow2].map((icon, i) => (
-              <div key={i} className="bg-white/20 rounded-2xl p-3 flex items-center justify-center min-w-[64px]">
+              <div key={i} className="bg-white/20 rounded-2xl p-3 flex items-center justify-center w-full">
                 {icon}
               </div>
             ))}
@@ -387,7 +385,7 @@ function AnimatedTextCarousel({ messages }: { messages: string[] }) {
         <div className="overflow-hidden w-full">
           <div className="flex gap-8 items-center w-max animate-marquee-ltr">
             {[...appsRow3, ...appsRow3].map((icon, i) => (
-              <div key={i} className="bg-white/20 rounded-2xl p-3 flex items-center justify-center min-w-[64px]">
+              <div key={i} className="bg-white/20 rounded-2xl p-3 flex items-center justify-center w-full">
                 {icon}
               </div>
             ))}
@@ -414,7 +412,7 @@ function AnimatedTextCarousel({ messages }: { messages: string[] }) {
       </div>
 
       {/* Auto AI Updates */}
-      <div className="md:col-span-2 max-w-4xl mx-auto rounded-[48px] bg-gradient-to-br from-teal-400 to-blue-800 p-12 flex flex-col justify-between min-h-[520px] shadow-xl relative overflow-hidden">
+      <div className="lg:col-span-2 rounded-[48px] bg-gradient-to-br from-teal-400 to-blue-800 p-12 flex flex-col justify-between min-h-[520px] shadow-xl relative overflow-hidden">
         <div>
          <div className="text-5xl md:text-4xl font-bold text-white mb-4">Auto AI Updates</div>
         <div className="text-xl text-white/90 mb-12 max-w-3xl">
