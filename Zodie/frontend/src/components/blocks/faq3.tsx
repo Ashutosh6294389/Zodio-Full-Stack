@@ -41,11 +41,11 @@ export default function FAQ({ data }: FAQProps) {
   }
 
   return (
-    <div className="irelative min-h-screen w-full overflow-hidden">
+    <div className="irelative min-h-screen bg-white w-full overflow-hidden">
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute -top-32 -left-32 w-[32rem] h-[32rem] bg-gradient-to-br from-purple-200 via-blue-100 to-pink-100 opacity-60 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-[40rem] h-[28rem] bg-gradient-to-tr from-blue-200 via-teal-100 to-purple-200 opacity-50 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 w-[60rem] h-[20rem] bg-gradient-to-r from-pink-100 via-blue-50 to-purple-100 opacity-30 rounded-full blur-2xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute -top-32 -left-32 w-[32rem] h-[32rem] bg-white rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-[40rem] h-[28rem] bg-white opacity-50 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 w-[60rem] h-[20rem] bg-white rounded-full blur-2xl -translate-x-1/2 -translate-y-1/2" />
       </div>
       {/* Header Section */}
       {/* Support Section */}
@@ -100,7 +100,9 @@ export default function FAQ({ data }: FAQProps) {
 
       {/* Big Horizontal Card with Two Highlighted Cards Inside */}
       {/* Call To Action Section */}
+      <div className="flex justify-center items-center mt-12">
         <CallToAction />
+      </div>
     </div>
       </div>
       )

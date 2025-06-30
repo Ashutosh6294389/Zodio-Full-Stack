@@ -16,6 +16,7 @@ import ScrollAnimationDemo from '../ui/CSD'
 import { ArrowRight } from 'lucide-react'
 import {AnimatedHeroBackground} from './AnimatedHeroBackground'
 import img from '@/images/image6.png'
+import img1 from '@/images/Dashboard.png'
 
 
 const transitionVariants = {
@@ -43,15 +44,15 @@ export function HeroSection() {
         <>
             <HeroHeader />
             <main className="overflow-hidden">
-                <section>
-                    <div className="relative min-h-[70vh] flex flex-col justify-center items-center pt-24 pb-4 overflow-hidden">
+                <section class Name="p-0 m-0">
+                    <div className="relative w-full flex flex-col items-center justify-start p-0 m-0 bg-transparent">
                         <div
                         className="absolute inset-0 w-full h-full z-0 bg-no-repeat bg-cover bg-center"
                         style={{
                             backgroundImage: `url(${img})`,
                         }}
                         />
-                        <div className="mx-auto max-w-5xl px-4 sm:px-6 w-full">
+                        <div className="mx-auto max-w-5xl px-6 w-full z-10 relative">
                             <div className="sm:mx-auto lg:mr-auto flex flex-col items-center text-center">
                                 <AnimatedGroup
                                     variants={{
@@ -67,33 +68,31 @@ export function HeroSection() {
                                     }}
                                 >
                                     <h1
-                                        className="max-w-4xl text-balance text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium mt-16 sm:mt-24 md:mt-32">
+                                        className="max-w-4xl text-balance text-5xl font-medium md:text-6xl mt-32 ">
                                         Hire Smarter, Faster and Fairer — <span className='text-primary'>Zordie AI</span>
                                     </h1>
                                     <p
-                                        className="mt-3 md:mt-4 max-w-4xl text-pretty text-sm sm:text-base md:text-lg lg:text-xl px-2 sm:px-0">
+                                        className="mt-4 max-w-4xl text-pretty text-lg md:text-xl">
                                         From screening and interviews to onboarding and workforce planning, Zordie AI empowers your team 
                                     </p>
                                     <p
-                                        className="mt-2 md:mt-4 max-w-4xl text-pretty text-sm sm:text-base md:text-lg lg:text-xl px-2 sm:px-0">
+                                        className="mt-4 max-w-4xl text-pretty text-lg md:text-xl">
                                         with advanced, autonomous agents that make hiring faster, fairer and future ready.
                                     </p>
-                                    <div className="flex flex-col sm:flex-row items-center gap-3 justify-center mt-6 md:mt-8">
+                                    <div className="flex items-center gap-2 justify-center mt-8">
                                         <div
                                             key={1}
-                                            className="bg-foreground/10 rounded-[14px] border p-0.5 w-full sm:w-auto">
+                                            className="bg-foreground/10 rounded-[14px] border p-0.5">
                                             <Button
                                                 asChild
                                                 size="lg"
-                                                className="rounded-xl px-4 md:px-5 py-2 md:py-3 text-sm md:text-base w-full sm:w-auto">
+                                                className="rounded-xl px-5 text-base">
                                                 <Link to="#link">
                                                     <span className="text-nowrap">Start Now</span>
                                                 </Link>
                                             </Button>
                                         </div>
-                                        <div className="w-full sm:w-auto">
-                                            <MovingBorderDemo></MovingBorderDemo>
-                                        </div>
+                                        <MovingBorderDemo></MovingBorderDemo>
                                     </div>
                                 </AnimatedGroup>
                             </div>
@@ -110,15 +109,20 @@ export function HeroSection() {
                                 },
                                 ...transitionVariants,
                             }}>
-                            <div className="relative overflow-hidden w-full mb-16">
-                                <div className="relative mx-auto max-w-5xl">
-                                    <ScrollAnimationDemo />
-                                </div>
+                            <div className="w-full flex justify-center mt-36 overflow-hidden" style={{ height: '500px' }}>
+                                <img
+                                    src={img1}
+                                    alt="Hero"
+                                    className="w-full max-w-5xl h-full object-cover"
+                                    draggable={false}
+                                    style={{ objectPosition: 'top' }}
+                                />
                             </div>
                         </AnimatedGroup>
+                        
                     </div>
                 </section>
-                <LogoCloud></LogoCloud>
+                <LogoCloud />
             </main>
         </>
     )
@@ -226,19 +230,18 @@ export const HeroHeader = () => {
 
 const LogoCloud = () => {
     return (
-        <section className="pb-10 sm:pb-16 md:pb-32 bg-[#fce9db]">
+        <section className="pt-2 pb-6 sm:pb-8 md:pb-12 bg-[#fce9db] mt-0">
             <div className="group relative m-auto max-w-6xl px-4 sm:px-6">
-                <div className="flex flex-col items-center md:flex-row">
+                <div className="flex flex-col items-center md:flex-row mt-4">
                     
-                    <div className="relative py-4 sm:py-6 w-full md:w-[calc(100%-11rem)]">
+                    <div className="relative py-2 sm:py-3 w-full md:w-[calc(100%-11rem)]]">
                         <InfiniteSlider
                             durationOnHover={20}
                             duration={40}
-                            gap={80} // Reduced gap for mobile
-                            >
+                            gap={112}>
                             <div className="flex">
                                 <img
-                                    className="mx-auto h-4 sm:h-5 w-fit dark:invert"
+                                    className="mx-auto h-5 w-fit dark:invert"
                                     src="https://html.tailus.io/blocks/customers/nvidia.svg"
                                     alt="Nvidia Logo"
                                     height="20"
@@ -248,7 +251,7 @@ const LogoCloud = () => {
 
                             <div className="flex">
                                 <img
-                                    className="mx-auto h-3 sm:h-4 w-fit dark:invert"
+                                    className="mx-auto h-4 w-fit dark:invert"
                                     src="https://html.tailus.io/blocks/customers/column.svg"
                                     alt="Column Logo"
                                     height="16"
@@ -257,7 +260,7 @@ const LogoCloud = () => {
                             </div>
                             <div className="flex">
                                 <img
-                                    className="mx-auto h-3 sm:h-4 w-fit dark:invert"
+                                    className="mx-auto h-4 w-fit dark:invert"
                                     src="https://html.tailus.io/blocks/customers/github.svg"
                                     alt="GitHub Logo"
                                     height="16"
@@ -266,7 +269,7 @@ const LogoCloud = () => {
                             </div>
                             <div className="flex">
                                 <img
-                                    className="mx-auto h-4 sm:h-5 w-fit dark:invert"
+                                    className="mx-auto h-5 w-fit dark:invert"
                                     src="https://html.tailus.io/blocks/customers/nike.svg"
                                     alt="Nike Logo"
                                     height="20"
@@ -275,7 +278,7 @@ const LogoCloud = () => {
                             </div>
                             <div className="flex">
                                 <img
-                                    className="mx-auto h-4 sm:h-5 w-fit dark:invert"
+                                    className="mx-auto h-5 w-fit dark:invert"
                                     src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
                                     alt="Lemon Squeezy Logo"
                                     height="20"
@@ -284,7 +287,7 @@ const LogoCloud = () => {
                             </div>
                             <div className="flex">
                                 <img
-                                    className="mx-auto h-3 sm:h-4 w-fit dark:invert"
+                                    className="mx-auto h-4 w-fit dark:invert"
                                     src="https://html.tailus.io/blocks/customers/laravel.svg"
                                     alt="Laravel Logo"
                                     height="16"
@@ -293,7 +296,7 @@ const LogoCloud = () => {
                             </div>
                             <div className="flex">
                                 <img
-                                    className="mx-auto h-5 sm:h-7 w-fit dark:invert"
+                                    className="mx-auto h-7 w-fit dark:invert"
                                     src="https://html.tailus.io/blocks/customers/lilly.svg"
                                     alt="Lilly Logo"
                                     height="28"
@@ -303,7 +306,7 @@ const LogoCloud = () => {
 
                             <div className="flex">
                                 <img
-                                    className="mx-auto h-4 sm:h-6 w-fit dark:invert"
+                                    className="mx-auto h-6 w-fit dark:invert"
                                     src="https://html.tailus.io/blocks/customers/openai.svg"
                                     alt="OpenAI Logo"
                                     height="24"
@@ -312,15 +315,15 @@ const LogoCloud = () => {
                             </div>
                         </InfiniteSlider>
 
-                        <div className="bg-linear-to-r from-background absolute inset-y-0 left-0 w-12 sm:w-20"></div>
-                        <div className="bg-linear-to-l from-background absolute inset-y-0 right-0 w-12 sm:w-20"></div>
+                        <div className="bg-linear-to-r from-background absolute inset-y-0 left-0 w-20"></div>
+                        <div className="bg-linear-to-l from-background absolute inset-y-0 right-0 w-20"></div>
                         <ProgressiveBlur
-                            className="pointer-events-none absolute left-0 top-0 h-full w-12 sm:w-20"
+                            className="pointer-events-none absolute left-0 top-0 h-full w-20"
                             direction="left"
                             blurIntensity={1}
                         />
                         <ProgressiveBlur
-                            className="pointer-events-none absolute right-0 top-0 h-full w-12 sm:w-20"
+                            className="pointer-events-none absolute right-0 top-0 h-full w-20"
                             direction="right"
                             blurIntensity={1}
                         />

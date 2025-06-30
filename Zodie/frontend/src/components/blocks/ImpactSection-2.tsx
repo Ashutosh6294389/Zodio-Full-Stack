@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import {CallToAction} from "@/components/blocks/CallToAction"
 
 const cards = [
   {
@@ -29,7 +30,7 @@ const cardVariants = {
 export function ImpactSection() {
   return (
     <section className="w-full py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-4 ">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {cards.map((card, idx) => (
             <motion.div
@@ -84,6 +85,9 @@ export function ImpactSection() {
             </motion.div>
           ))}
         </div>
+        <div className="flex justify-center items-center mt-12">
+        <CallToAction />
+      </div>
       </div>
     </section>
   );

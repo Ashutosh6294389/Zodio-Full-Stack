@@ -22,7 +22,6 @@ export function SolutionPage () {
       <ResultsSection />
       <SolutionsImpactSection />
       <ImpactSection />
-      <CallToAction />
       <Footerdemo />
     </div>
   )

@@ -19,6 +19,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 import {CallToAction} from "@/components/blocks/CallToAction"
+import {MissionSection} from "@/components/blocks/MissionSection"
+import {StorySection} from "@/components/blocks/StorySection"
 
 
 // Ocean Wave Component (Static version)
@@ -47,10 +49,10 @@ const About = () => {
     <div className="relative bg-[radial-gradient(120%_120%_at_50%_100%,rgba(253,186,116,0.8)_0%,white_85%)]">
       <Navbar />
       <HeroSection />
+      <MissionSection />
+      <StorySection />
       <OurValues />
       <OurTeam />
-      <JoinUs />
-      <CallToAction />
       <Footerdemo />
     </div>
   );
@@ -81,41 +83,42 @@ const OurValues = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-blue-50 to-white relative overflow-hidden">
+    <section className="py-20 bg-white  relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-[300px] w-full bg-gradient-to-b from-blue-200/40 to-transparent blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-[200px] w-full bg-gradient-to-t from-blue-200/40 to-transparent blur-3xl"></div>
+        <div className="absolute top-0 left-0 right-0 h-[300px] w-full bg-white  blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-[200px] w-full bg-white to-transparent blur-3xl"></div>
         {/* Grid pattern */}
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-20"></div>
       </div>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16 relative">
-          <h2 className="text-4xl font-bold tracking-tight text-black sm:text-5xl">
-            Our Core Values
-          </h2>
-          <p className="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
-            The principles that guide everything we do at Zodio, from product development to customer service.
-          </p>
+  <div className="text-center mb-16 relative">
+    <h2 className="text-4xl font-bold tracking-tight text-black sm:text-5xl">
+      Our Core Values
+    </h2>
+    <p className="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
+      The principles that guide everything we do at Zodio, from product development to customer service.
+    </p>
+  </div>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    {values.map((value, index) => (
+      <div
+        key={index}
+        className="group bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300/80 backdrop-blur-md border border-blue-200/50 rounded-[20px] p-6 relative overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:from-blue-200 hover:to-blue-400"
+        style={{ backdropFilter: 'blur(12px)' }}
+      >
+        <div className="relative z-10">
+          <div className="bg-white/40 group-hover:bg-white/70 transition-all duration-300 backdrop-blur-sm rounded-full w-16 h-16 flex items-center justify-center mb-4 shadow-md border border-blue-100/50">
+            {value.icon}
+          </div>
+          <h3 className="text-xl font-semibold text-black mb-2 group-hover:text-blue-800 transition-colors duration-300">{value.title}</h3>
+          <p className="text-gray-700 group-hover:text-blue-900 transition-colors duration-300">{value.description}</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {values.map((value, index) => (
-            <div
-              key={index}
-              className="bg-transparent backdrop-blur-md border border-blue-100/30 rounded-[20px] p-6 relative overflow-hidden group shadow-lg"
-              style={{ backdropFilter: 'blur(12px)' }}
-            >
-              <div className="relative z-10">
-                <div className="bg-transparent backdrop-blur-sm rounded-full w-16 h-16 flex items-center justify-center mb-4 shadow-md border border-blue-100/50">
-                  {value.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-black mb-2">{value.title}</h3>
-                <p className="text-gray-700">{value.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 bg-gradient-to-br from-blue-400 via-blue-200 to-blue-100 pointer-events-none" />
       </div>
+    ))}
+  </div>
+</div>
     </section>
   );
 };
@@ -153,7 +156,7 @@ const OurTeam = () => {
       {/* Background elements */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-[300px] w-full bg-white to-transparent blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-[200px] w-full bg-gradient-to-t from-purple-200/30 to-transparent blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-[200px] w-full bg-white to-transparent blur-3xl"></div>
       </div>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 relative">
@@ -202,6 +205,9 @@ const OurTeam = () => {
             </div>
           ))}
         </div>
+        <div className="flex justify-center items-center mt-12">
+        <CallToAction />
+      </div>
       </div>
     </section>
   );
@@ -209,67 +215,10 @@ const OurTeam = () => {
 
 const JoinUs = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-purple-50 to-blue-50 relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-[300px] w-full bg-gradient-to-b from-purple-200/30 to-transparent blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-[200px] w-full bg-gradient-to-t from-blue-200/30 to-transparent blur-3xl"></div>
-        {/* Grid pattern */}
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
+    <section className="py-20 bg-white  relative overflow-hidden">
+      <div className="flex justify-center items-center mt-12">
+        <CallToAction />
       </div>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-black sm:text-4xl mb-4 relative inline-block"
-          >
-            Join Our Team
-          </motion.h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto mb-6"></div>
-          <p className="text-gray-700 mb-8">We're always looking for talented individuals who share our passion for innovation and excellence.</p>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="bg-transparent backdrop-blur-md border border-blue-100/30 rounded-[20px] p-8 max-w-2xl mx-auto shadow-lg"
-            style={{ backdropFilter: 'blur(12px)' }}
-          >
-            <h3 className="text-2xl font-bold text-black mb-4">Open Positions</h3>
-            <ul className="space-y-4 mb-6">
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-lg font-semibold text-black">Senior Full Stack Developer</h4>
-                  <p className="text-gray-700">Join our core team to build the future of HR management.</p>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-lg font-semibold text-black">UX/UI Designer</h4>
-                  <p className="text-gray-700">Help us create beautiful, intuitive interfaces for our users.</p>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-lg font-semibold text-black">Product Manager</h4>
-                  <p className="text-gray-700">Drive our product vision and roadmap to deliver exceptional value.</p>
-                </div>
-              </li>
-            </ul>
-            <Button className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium py-2 px-4 rounded-[20px] flex items-center justify-center">
-              View All Positions
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </motion.div>
-        </div>
-      </div>
-      <OceanWaves />
     </section>
   );
 };
@@ -288,188 +237,124 @@ function Footerdemo() {
   }, [isDarkMode])
 
   return (
-    <footer className="relative border-t border-t-primary-400  text-foreground transition-colors duration-300">
-      <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-          <div className="relative">
-            <h2 className="mb-4 text-3xl font-bold tracking-tight">Zordi AI</h2>
-            <p className="mb-6 text-muted-foreground">
-              Get the latest news and updates on AI-powered hiring
-            </p>
-            <form className="relative">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                className="pr-12 backdrop-blur-sm border-primary-200"
-              />
-              <Button
-                type="submit"
-                size="icon"
-                className="absolute right-1 top-1 h-8 w-8 rounded-full bg-primary text-primary-foreground transition-transform hover:scale-105"
-              >
-                <Send className="h-4 w-4" />
-                <span className="sr-only">Subscribe</span>
-              </Button>
-            </form>
-            <div className="absolute -right-4 top-0 h-24 w-24 rounded-full bg-primary/10 blur-2xl" />
+    <footer className="relative border-t border-t-primary-400 text-white bg-gradient-to-br from-orange-500 via-orange-400 to-orange-600 transition-colors duration-300">
+        <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
+          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+            <div className="relative">
+              <h2 className="mb-4 text-3xl font-bold tracking-tight text-white">Zordi AI</h2>
+              <p className="mb-6 text-white">
+                Get the latest news and updates on AI-powered hiring
+              </p>
+              
+              <div className="absolute -right-4 top-0 h-24 w-24 rounded-full bg-primary/10 blur-2xl" />
+            </div>
+            <div>
+              <h3 className="mb-4 text-lg font-semibold text-white">Quick Links</h3>
+              <nav className="space-y-2 text-sm">
+                <Link to="/" className="block transition-colors text-white">
+                  Home
+                </Link>
+                <Link to="/about" className="block transition-colors text-white">
+                  About Us
+                </Link>
+                <Link to="/features" className="block transition-colors text-white">
+                  Features
+                </Link>
+                <Link to="/solutions" className="block transition-colors text-white">
+                  Solutions
+                </Link>
+                <Link to="/login" className="block transition-colors text-white">
+                  Login/Signup
+                </Link>
+              </nav>
+            </div>
+            <div>
+              <h3 className="mb-4 text-lg font-semibold text-white">Contact Us</h3>
+              <address className="space-y-2 text-sm not-italic text-white">
+                <p>Email: Customercare@Zordie.in or Support@Zordie.in</p>
+              </address>
+            </div>
+            <div className="relative">
+              <h3 className="mb-4 text-lg font-semibold text-white">Follow Us</h3>
+              <div className="mb-6 flex space-x-4">
+                {/* ...social icons as in your code... */}
+                <Button  size="icon" className="rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40%"
+                    height="50%"
+                    className="sm:w-24 w-full text-black-500"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                  </svg>
+                  <span className="sr-only">Facebook</span>
+                </Button>
+                <Button  size="icon" className="rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40%"
+                    height="50%"
+                    viewBox="0 0 70 62"
+                    fill="none"
+                    className="sm:w-24 w-full text-black-500"
+                  >
+                    <path
+                      d="M55.1291 0H65.8629L42.4127 26.2626L70 62H48.3994L31.481 40.3254L12.1226 62H1.38228L26.4646 33.9092L0 0H22.149L37.4417 19.8114L55.1291 0ZM51.3619 55.7046H57.3096L18.9172 5.96472H12.5347L51.3619 55.7046Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                  <span className="sr-only">X</span>
+                </Button>
+                <Button  size="icon" className="rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                  <span className="sr-only">Instagram</span>
+                </Button>
+                <Button  size="icon" className="rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40%"
+                    height="50%"
+                    viewBox="0 0 80 78"
+                    fill="none"
+                    className="sm:w-24 w-full text-black-500"
+                  >
+                    <path
+                      d="M16.6 8.79036C16.6 13.3937 12.9 17.1237 8.33333 17.1237C3.76667 17.1237 0.0666667 13.3937 0.0666667 8.79036C0.0666667 4.19036 3.76667 0.457031 8.33333 0.457031C12.9 0.457031 16.6 4.19036 16.6 8.79036ZM16.6667 23.7904H0V77.1237H16.6667V23.7904ZM43.2733 23.7904H26.7133V77.1237H43.2767V49.127C43.2767 33.5604 63.3733 32.287 63.3733 49.127V77.1237H80V43.3537C80 17.087 50.26 18.0437 43.2733 30.9737V23.7904Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                  <span className="sr-only">LinkedIn</span>
+                </Button>
+              </div>
+            </div>
           </div>
-          <div>
-            <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
-            <nav className="space-y-2 text-sm">
-              <Link to="/" className="block transition-colors hover:text-primary">
-                Home
+          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-t-blue-400 pt-8 text-center md:flex-row">
+            <p className="text-sm text-white">
+              © 2025 Zordie AI . All rights reserved.
+            </p>
+            <nav className="flex gap-4 text-sm">
+              <Link to="/about" className="transition-colors text-white">
+                Privacy Policy
               </Link>
-              <Link to="/about" className="block transition-colors hover:text-primary">
-                About Us
+              <Link to="/about" className="transition-colors text-white">
+                Terms of Service
               </Link>
-              <Link to="/features" className="block transition-colors hover:text-primary">
-                Features
-              </Link>
-              <Link to="/solutions" className="block transition-colors hover:text-primary">
-                Solutions
-              </Link>
-              <Link to="/login" className="block transition-colors hover:text-primary">
-                Login/Signup
+              <Link to="/about" className="transition-colors text-blue">
+                Cookie Settings
               </Link>
             </nav>
           </div>
-          <div>
-            <h3 className="mb-4 text-lg font-semibold">Contact Us</h3>
-            <address className="space-y-2 text-sm not-italic">
-              <p>Located in Kanpur</p>
-              <p>Uttar Pradesh, India</p>
-              <p>Phone: +91 9044 173 100</p>
-              <p>Email: snehal.23546@sscbs.du.ac.in</p>
-            </address>
-          </div>
-          <div className="relative">
-            <h3 className="mb-4 text-lg font-semibold">Follow Us</h3>
-            <div className="mb-6 flex space-x-4">
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
-                       <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                   width='40%'
-                height='50%'
-                className="sm:w-24 w-full  text-black-500"
-                fill="currentColor"
-              viewBox="0 0 24 24"
-               >
-        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-      </svg>
-                      <span className="sr-only">Facebook</span>
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Follow us on Facebook</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
-                         <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='40%'
-                height='50%'
-                viewBox='0 0 70 62'
-                fill='none'
-                className='sm:w-24 w-full  text-black-500'
-              >
-                <path
-                  d='M55.1291 0H65.8629L42.4127 26.2626L70 62H48.3994L31.481 40.3254L12.1226 62H1.38228L26.4646 33.9092L0 0H22.149L37.4417 19.8114L55.1291 0ZM51.3619 55.7046H57.3096L18.9172 5.96472H12.5347L51.3619 55.7046Z'
-                  fill='currentColor'
-                ></path>
-              </svg>
-                      <span className="sr-only">X</span>
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Follow us on X</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                      </svg>
-                      <span className="sr-only">Instagram</span>
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Follow us on Instagram</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
-                       <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='40%'
-                height='50%'
-                viewBox='0 0 80 78'
-                fill='none'
-                className='sm:w-24 w-full text-black-500'
-              >
-                <path
-                  d='M16.6 8.79036C16.6 13.3937 12.9 17.1237 8.33333 17.1237C3.76667 17.1237 0.0666667 13.3937 0.0666667 8.79036C0.0666667 4.19036 3.76667 0.457031 8.33333 0.457031C12.9 0.457031 16.6 4.19036 16.6 8.79036ZM16.6667 23.7904H0V77.1237H16.6667V23.7904ZM43.2733 23.7904H26.7133V77.1237H43.2767V49.127C43.2767 33.5604 63.3733 32.287 63.3733 49.127V77.1237H80V43.3537C80 17.087 50.26 18.0437 43.2733 30.9737V23.7904Z'
-                  fill='currentColor'
-                ></path>
-              </svg>
-                      <span className="sr-only">LinkedIn</span>
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Connect with us on LinkedIn</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            </div>
-            {/* <div className="flex items-center space-x-2">
-              <Sun className="h-4 w-4" />
-              <Switch
-                id="dark-mode"
-                checked={isDarkMode}
-                onCheckedChange={setIsDarkMode}
-              />
-              <Moon className="h-4 w-4" />
-              <Label htmlFor="dark-mode" className="sr-only">
-                Toggle dark mode
-              </Label>
-            </div> */}
-          </div>
         </div>
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-t-primary-400 pt-8 text-center md:flex-row">
-          <p className="text-sm text-muted-foreground">
-            © 2025 Zordie AI . All rights reserved.
-          </p>
-          <nav className="flex gap-4 text-sm">
-            <Link to="/about" className="transition-colors hover:text-primary">
-              Privacy Policy
-            </Link>
-            <Link to="/about" className="transition-colors hover:text-primary">
-              Terms of Service
-            </Link>
-            <Link to="/about" className="transition-colors hover:text-primary">
-              Cookie Settings
-            </Link>
-          </nav>
-        </div>
-      </div>
-    </footer>
+      </footer>
   )
 }
 

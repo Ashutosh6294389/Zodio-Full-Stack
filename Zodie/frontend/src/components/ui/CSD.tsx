@@ -3,6 +3,7 @@ import dash from '@/assets/Hero section.png'
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import {AnimatedHeroBackground} from "@/components/blocks/AnimatedHeroBackground"
+import img1 from "@/images/Dashboard.png"
 export default function ScrollAnimationDemo() {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({
@@ -17,9 +18,9 @@ export default function ScrollAnimationDemo() {
     <div className="flex flex-col overflow-hidden min-h-screen" ref={ref}>
       <ContainerScroll>
         <motion.img
-          src={dash}
+          src={img1}
           alt="Dashboard"
-          className="mx-auto rounded-2xl object-cover  object-center"
+          className="w-full max-w-7xl mx-auto rounded-2xl object-cover  object-center"
           draggable={false}
           style={{ scale, y }}
         />

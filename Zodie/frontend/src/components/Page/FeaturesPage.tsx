@@ -30,7 +30,7 @@ import {TeamsPage} from "@/components/blocks/TeamsPage";
 
 export function FeaturesPage() {
   return (
-    <div className="min-h-screen relative bg-[radial-gradient(120%_120%_at_50%_100%,rgba(253,186,116,0.8)_0%,white_85%)]">
+    <div className="min-h-screen relative bg-white">
 
       <Navbar></Navbar>
       {/* <HeroParallaxDemo></HeroParallaxDemo> */}
@@ -73,7 +73,14 @@ export function FeaturesPage() {
       {/* RBAC Features Section - Security features at the end */}
       <RbacHero></RbacHero>
       <RbacFeaturesPage></RbacFeaturesPage>
-      <TeamsPage></TeamsPage>
+
+      {/* Call To Action Section */}
+      <div className="flex justify-center items-center mt-12 bg-white py-12">
+        <div className="w-full max-w-7xl">
+          <TeamsPage />
+        </div>
+      </div>
+      
       
 
       {/* Hero Section with Gradient Heading */}
