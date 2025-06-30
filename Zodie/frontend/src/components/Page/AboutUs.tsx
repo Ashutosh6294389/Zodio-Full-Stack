@@ -292,7 +292,7 @@ function Footerdemo() {
       <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="relative">
-            <h2 className="mb-4 text-3xl font-bold tracking-tight">Stay Connected</h2>
+            <h2 className="mb-4 text-3xl font-bold tracking-tight">Zordi AI</h2>
             <p className="mb-6 text-muted-foreground">
               Get the latest news and updates on AI-powered hiring
             </p>
