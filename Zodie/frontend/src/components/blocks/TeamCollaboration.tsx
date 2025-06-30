@@ -104,7 +104,7 @@ const teamFeatures = [
 export function TeamCollaboration() {
   return (
     <section className="py-20 bg-white from-blue-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full h-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-6">
             Seamless Team Integration

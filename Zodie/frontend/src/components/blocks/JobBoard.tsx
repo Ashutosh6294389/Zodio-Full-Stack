@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Search, Zap, Target, Bell, Globe, Megaphone, BarChart2, Tag, RefreshCw } from 'lucide-react';
+import img1 from "@/images/Job_board.png"
 
 type FeatureCard = {
   icon: React.ElementType;
@@ -124,21 +125,13 @@ export function JobBoard() {
             </div>
 
             {/* Job Board Preview */}
-            <div className="bg-gray-900 rounded-xl p-6 shadow-2xl">
-              <div className="bg-gray-800 rounded-lg p-4 flex items-center justify-between mb-4">
-                <div className="flex items-center">
-                  <div className="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                </div>
-                <div className="bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-300">job.zordie.ai</div>
-              </div>
-              <div className="bg-gray-800 rounded-lg p-4 h-48 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-blue-400 text-xl font-bold mb-2">Zordie Job Board</div>
-                  <div className="text-gray-400 text-sm">AI-powered job matching in action</div>
-                </div>
-              </div>
+            <div className="bg-white-900 rounded-xl p-6 shadow-2xl">
+              <img 
+                  src={img1}
+                  alt="Daily Employee Report Dashboard" 
+                  className="w-full h-auto object-contain rounded-2xl shadow-lg"
+                />
+              
             </div>
           </div>
 

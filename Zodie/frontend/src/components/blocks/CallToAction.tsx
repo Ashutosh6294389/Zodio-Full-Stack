@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export function CallToAction () {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gray-900 relative overflow-hidden">
+    <div className="min-h-screen w-full flex items-center justify-center bg-blue-900 relative overflow-hidden">
       <div className="relative isolate overflow-hidden w-full h-full flex flex-col items-center justify-center px-6 py-24 sm:px-24 xl:py-32">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
