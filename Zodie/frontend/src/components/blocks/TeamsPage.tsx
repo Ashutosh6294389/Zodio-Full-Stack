@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import img1 from "@/images/Built_Teams.png";
 
 export  function TeamsPage() {
   return (
@@ -24,24 +25,11 @@ export  function TeamsPage() {
             </div>
             
             <div className=" flex items-center justify-center">
-              <div className="grid grid-cols-3 gap-4 max-w-md">
-                {[...Array(9)].map((_, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: index * 0.05 }}
-                    viewport={{ once: true }}
-                    className="bg-white/10 backdrop-blur-sm rounded-lg aspect-square flex items-center justify-center p-4"
-                  >
-                    <div className="w-full h-full rounded-md bg-white/20 flex items-center justify-center">
-                      <div className="text-white text-opacity-70 text-4xl font-bold">
-                        {String.fromCharCode(65 + index)}
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+                <img 
+                    src={img1}
+                    alt="Prime Agent Dashboard" 
+                    className="w-full h-auto object-contain rounded-md shadow-lg"
+                  />
             </div>
           </div>
         </div>
